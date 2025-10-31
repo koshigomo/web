@@ -1,0 +1,114 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.question-image-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.question-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.question-text {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.answer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+button.answer {
+  background-color: #ff6f61;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.answer:hover {
+  background-color: #ff3b2e;
+}
+
+.top-screen {
+  text-align: center;
+  padding: 50px;
+}
+
+#start-image {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+#start-image:hover {
+  transform: scale(1.05);
+}
+
+.rec-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.rec-title {
+  margin: 8px 0;
+  font-size: 1.2rem;
+}
+
+.rec-image {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.detail-button {
+  display: inline-block;
+  background-color: #0078d4;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.detail-button:hover {
+  background-color: #005a9e;
+}
+
+body {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+}
+
+
+img {
+  width: 50vw; /* 画面の50%の幅 */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.rec-image {
+  width: 50vw;              /* 画面の50%の幅 */
+height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+
+}
+
