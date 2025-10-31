@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>旅行先診断</title>
+  <link rel="stylesheet" href="../css/sindan.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <h1>あなたにオススメの旅行先診断</h1>
+
+    <!-- トップ画面 -->
+    <div id="top" class="top-screen">
+    <img src="../img/top.jpg" alt="診断スタート" id="start-image">
+   </div>
+
+    <!-- Q1 -->
+    <div id="q1" class="question" style="display:none;">
+      <div class="question-image-wrapper">
+       <img class="question-image" src="../img/q1.jpg" alt="Q1の関連画像">
+      </div>
+    <div class="question-text">
+      <h2>Q1. 何日ぐらい旅行へ行きますか？</h2>
+    </div>
+    <div class="answer-buttons">
+      <button class="answer" data-days="日帰り">日帰り</button>
+      <button class="answer" data-days="１泊２日">1泊2日</button>
+     <button class="answer" data-days="２泊３日以上">2泊3日以上</button>
+     
+   </div>
+  </div>
+
+
+    <!-- Q2 -->
+    <div id="q2" class="question" style="display:none;">
+      <div class="question-image-wrapper">
+      <img class="question-image" src="../img/q2.jpg" alt="Q2の関連画像">
+      </div>
+      <div class="question-text">
+      <h2>Q2. どの季節に旅行へ行きますか？</h2>
+      </div>
+      <div class="answer-buttons">
+      <button class="answer" data-season="春">春</button>
+      <button class="answer" data-season="夏">夏</button>
+      <button class="answer" data-season="秋">秋</button>
+      <button class="answer" data-season="冬">冬</button>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div id="q3" class="question" style="display:none;">
+      <div class="question-image-wrapper">
+      <img class="question-image" src="../img/q3.jpg" alt="Q3の関連画像">
+      </div>
+      <div class="question-text">
+      <h2>Q3. 山と海どちらが好きですか？</h2>
+      </div>
+      <div class="answer-buttons">
+      <button class="answer" data-type="山">山</button>
+      <button class="answer" data-type="海">海</button>
+      <button class="answer" data-type="どちらでもない">どちらでもない</button>
+      </div>
+    </div>
+
+    <!-- 結果 -->
+    <div id="result" style="display:none;">
+      <h2>あなたへのおすすめ旅行先は…</h2>
+      <p id="recommendation"></p>
+    </div>
+  </div>
+
+  <script src="../js/travel.js"></script>
+</body>
+</html>
