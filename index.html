@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>日本の秘境ガイド</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="brand">日本の秘境ガイド</div>
+    <button class="hamburger" id="hambtn" aria-controls="main-nav" aria-expanded="false" aria-label="メニューを開く">
+      <span class="box" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+
+    <!-- PC表示ではこのnavが水平に表示され、モバイルではサイドパネルとして使われます -->
+    <nav id="main-nav" class="side" role="navigation" aria-hidden="true">
+      <ul>
+        <li><a href="../index.html">ホームに戻る</a></li>
+        <li><a href="html/travel.html">旅行先診断</a></li>
+      </ul>
+    </nav>
+  </header>
+  <nav id="nav">
+    <a href="html/aomori.html">奥入瀬渓流/弘前公園</a>
+    <a href="html/ibaraki.html">ひたち海浜公園/袋田の滝</a>
+    <a href="html/chiba.html">鋸山</a>
+    <a href="html/yamagata.html">蔵王の樹氷</a>
+    <a href="html/eria1.html">神の子池</a>
+    <a href="html/eria2.html">立山黒部・雪の大谷</a>
+    <a href="html/eria3.html">清津峡トンネル</a>
+    <a href="html/eria4.html">竜宮窟</a>
+    <a href="html/eria5.html">七里ヶ浜/由比ヶ浜</a>
+    <a href="html/kawazu.html">河津七滝</a>
+    <a href="html/okinawa.html">小笠原諸島</a>
+    <a href="html/kamikouti.html">上高地</a>
+    <a href="html/etigo.html">越後湯沢</a>
+    <a href="html/asinoko.html">芦ノ湖</a>
+    <a href="html/shiokaze.html">夕日の塔</a>
+    <a href="html/nikkou.html">奥日光</a>
+    <a href="html/daihukuzi.html">大福寺</a>
+    <a href="html/huzi.html">富士五湖周辺の秘境スポット</a>
+    <a href="html/hakuba.html">白馬マウンテンバー</a>
+  </nav>
+
+  <!-- オーバーレイ：メニュー開いてるときに背面をクリックで閉じる -->
+  <div class="overlay" id="overlay" tabindex="-1" aria-hidden="true"></div>
+
+  <main>
+    <section class="gallery">
+      <a href="html/aomori.html"><img src="img/1200px-Hirosaki_castle.jpg" class="active" alt="秘境1"></a>
+      <a href="html/aomori.html"><img src="img/okuirise2.jpg" alt="秘境2"></a>
+      <a href="html/ibaraki.html"><img src="img/ibaraki.jpeg" alt="秘境3"></a>
+      <a href="html/yamagata.html"><img src="img/zaou.webp" alt="秘境4"></a>
+      <a href="html/chiba.html"><img src="img/iwa.jpg"></a>
+      <a href="html/eria1.html"><img src="img/kamikoike.jpg"></a>
+      <a href="html/eria2.html"><img src="img/yukinoootani4.jpg"></a>
+      <a href="html/eria3.html"><img src="img/kiyotukyou1.jpg"></a>
+      <a href="html/eria4.html"><img src="img/shimoda1.jpg"></a>
+      <a href="html/eria5.html"><img src="img/kamakura1.jpg"></a>
+      <a href="html/kawazu.html"><img src="img/kawazu1.jpeg"></a>
+      <a href="html/okinawa.html"><img src="img/okinawa1.jpeg"></a>
+      <a href="html/kamikouti.html"><img src="img/kmikouti1.jpg"></a>
+      <a href="html/etigo.html"><img src="img/etigo1.jpeg"></a>
+      <a href="html/asinoko.html"><img src="img/asinoko1.jpeg"></a>
+      <a href="html/shiokaze.html"><img src="img/夕日の塔.jpg"></a>
+      <a href="html/nikkou.html"><img src="img/山.jpg"></a>
+      <a href="html/daihukuzi.html"><img src="img/寺.jpg"></a>
+      <a href="html/huzi.html"><img src="img/湖１.jpeg"></a>
+      <a href="html/hakuba.html"><img src="img/山１.jpeg"></a>
+    </section>
+    <section class="hero" id="home" style="max-width:900px;margin:20px auto;text-align: center;">
+      <h1>まだ見ぬ日本を旅しよう <br>
+         人々に知られていない絶景と静寂の世界へ。</h1>
+      <p>日本には観光地として名高い場所だけでなく、静かに自然が息づく「秘境」が数多く存在します。
+        <br>四季の移ろいに包まれ、歴史や伝説を感じさせる景観。都会の喧騒を離れ、心が洗われるような瞬間が待っています。
+        このサイトでは、ガイドブックに載らないような 隠れた絶景スポット を紹介します。</p>
+    </section>
+
+    <section id="about" style="max-width:900px;margin:20px auto;text-align: center;">
+      <p>日本の秘境は、自然の偉大さと静けさを思い出させてくれる場所。
+      <br>あなたも次の旅で、まだ知られていない景色を探しに出かけてみませんか？</p>
+    </section>
+  </main>
+
+  <footer>
+     &copy; 2025 zekkei D班
+  </footer>
+
+  <script>
+    // 要素取得
+    const btn = document.getElementById('hambtn');
+    const nav = document.getElementById('main-nav');
+    const overlay = document.getElementById('overlay');
+
+    // メニュー開閉関数
+    function openMenu() {
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'メニューを閉じる');
+      nav.classList.add('open');
+      nav.setAttribute('aria-hidden', 'false');
+      overlay.classList.add('visible');
+      overlay.setAttribute('aria-hidden','false');
+
+      // 最初のリンクにフォーカスを移す（アクセシビリティ向上）
+      const firstLink = nav.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
+
+    function closeMenu() {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'メニューを開く');
+      nav.classList.remove('open');
+      nav.setAttribute('aria-hidden', 'true');
+      overlay.classList.remove('visible');
+      overlay.setAttribute('aria-hidden','true');
+
+      // トグルボタンにフォーカス戻す
+      btn.focus();
+    }
+
+    // トグル
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      if (expanded) closeMenu(); else openMenu();
+    });
+
+    // オーバーレイクリックで閉じる
+    overlay.addEventListener('click', closeMenu);
+
+    // キーボード操作 (Enter/Space handled by default for button; add Esc to close)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        // escで閉じる（開いているとき）
+        if (btn.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+        }
+      }
+    });
+
+    // メニュー内のリンクをクリックしたら閉じる（モバイルで自然な挙動）
+    nav.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if(link){
+        if(window.innerWidth < 900)closeMenu();
+
+        return;
+      }
+      
+    });
+
+    // 画面リサイズ時にメニュー状態を適切にリセット
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 900) {
+        // PC表示では強制的に閉じて属性をリセット
+        btn.setAttribute('aria-expanded','false');
+        btn.setAttribute('aria-label','メニューを開く');
+        nav.classList.remove('open');
+        nav.setAttribute('aria-hidden','false'); // PCでは nav は表示される
+        overlay.classList.remove('visible');
+      } else {
+        // 小さい画面では非表示がデフォ
+        nav.setAttribute('aria-hidden', btn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+      }
+    });
+    const slides = document.querySelectorAll('.gallery img');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+      });
+    }
+
+    showSlide(currentIndex);
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }, 3000);
+  </script>
+</body>
+</html>
